@@ -14,10 +14,10 @@ class MyBook extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData().copyWith(
+      theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: KprimaryColor,
       ),
-      home:const  SplashView(),
+      home:const SplashView(),
     );
   }
 }
