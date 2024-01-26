@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:my_book/Features/home/presenaion/views/home_view.dart';
 import 'package:my_book/Features/splash/presentation/views/widget/sliding_text.dart';
+import 'package:my_book/constants.dart';
 import 'package:my_book/core/utls/assets.dart';
 
 class splshViewBody extends StatefulWidget {
@@ -16,16 +19,11 @@ class _splshViewBodyState extends State<splshViewBody>
 
   void initState() {
     super.initState();
-
-    animationController = AnimationController(
-      duration: Duration(seconds: 3),
-      vsync: this,
-    );
-    slidingAnimation = Tween<Offset>(begin: Offset(0, 10), end: Offset.zero)
-        .animate(animationController);
-    animationController.forward();
+    initSlidingAnimation();
+    navigateToHome();
   }
-  void dispose(){
+
+  void dispose() {
     super.dispose();
     animationController.dispose();
   }
@@ -44,5 +42,20 @@ class _splshViewBodyState extends State<splshViewBody>
       ],
     );
   }
-}
 
+  void initSlidingAnimation() {
+    animationController = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+    );
+    slidingAnimation = Tween<Offset>(begin: Offset(0, 10), end: Offset.zero)
+        .animate(animationController);
+    animationController.forward();
+  }
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(() => const HomeView(),
+          transition: Transition.fade, duration: KTranstionDuration);
+    });
+  }
+}
