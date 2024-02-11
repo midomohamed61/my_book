@@ -51,7 +51,7 @@ class BestSellerListViewItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(image: AssetImage(AssetsData.testImage))),
         ),
-      );
+      ),
         ],
       ),
     );
