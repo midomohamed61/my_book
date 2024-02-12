@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_book/Features/home/presenaion/views/widgets/book_rating.dart';
 import 'package:my_book/core/utls/assets.dart';
 import 'package:my_book/core/utls/styles.dart';
 class BestSellerListViewItem extends StatelessWidget {
@@ -45,12 +47,14 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text('19.99 \$',
                     style: Styles.textStyle20.copyWith(
                         fontWeight: FontWeight.bold
                     ),
-                  )
+                  ),
+                  BookRating(),
                 ],
               )
             ],

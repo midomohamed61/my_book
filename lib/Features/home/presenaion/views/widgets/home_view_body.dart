@@ -3,7 +3,7 @@ import 'package:my_book/Features/home/presenaion/views/widgets/best_seller.dart'
 import 'package:my_book/Features/home/presenaion/views/widgets/custom_app_bar.dart';
 import 'package:my_book/Features/home/presenaion/views/widgets/featured_books_list_view.dart';
 import 'package:my_book/constants.dart';
-import 'package:my_book/core/utls/assets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_book/core/utls/styles.dart';
 
 class HomeViewBody extends StatefulWidget {
