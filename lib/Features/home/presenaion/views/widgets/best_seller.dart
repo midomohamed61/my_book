@@ -38,16 +38,8 @@ class BestSellerListViewItem extends StatelessWidget {
               Text('jk Rowling ',
                 style: Styles.textStyle14,
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width*.5,
-                child: Text("Harry Potter and the Goblet of fire",
-                  style: Styles.textStyle20,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('19.99 \$',
                     style: Styles.textStyle20.copyWith(
