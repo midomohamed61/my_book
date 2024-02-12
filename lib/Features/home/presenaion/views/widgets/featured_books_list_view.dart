@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_book/Features/home/presenaion/views/widgets/custom_list_view_item.dart';
+import 'package:my_book/Features/home/presenaion/views/widgets/custom_book_item.dart';
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
 
