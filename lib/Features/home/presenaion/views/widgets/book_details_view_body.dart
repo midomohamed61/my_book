@@ -3,6 +3,7 @@ import 'package:my_book/Features/home/presenaion/views/widgets/book_rating.dart'
 import 'package:my_book/Features/home/presenaion/views/widgets/books_action.dart';
 import 'package:my_book/Features/home/presenaion/views/widgets/custom_book_details_app_bar.dart';
 import 'package:my_book/Features/home/presenaion/views/widgets/custom_book_item.dart';
+import 'package:my_book/Features/home/presenaion/views/widgets/similar_books_list_view.dart';
 import 'package:my_book/core/utls/styles.dart';
 import 'package:my_book/core/widget/custom_button.dart';
 
@@ -41,9 +42,22 @@ class BookDetailsViewBody extends StatelessWidget {
           ),
           const SizedBox(height: 37,),
           const BookAction(),
+          const SizedBox(height: 30,),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text('You can also like',
+            style:Styles.textStyle14.copyWith(
+              fontWeight: FontWeight.w600,
+            ) ,
+            ),
+          ),
+          const SizedBox(height: 16,),
+          SimilarBooksListView(),
+          const SizedBox(height: 40,),
         ],
       ),
     );
   }
 }
+
 
