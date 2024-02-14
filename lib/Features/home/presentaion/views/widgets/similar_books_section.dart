@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_book/Features/home/presenaion/views/widgets/similar_books_list_view.dart';
+import 'package:my_book/Features/home/presentaion/views/widgets/similar_books_list_view.dart';
 import 'package:my_book/core/utls/styles.dart';
 class SimilarBooksSection extends StatelessWidget {
   const SimilarBooksSection({super.key});

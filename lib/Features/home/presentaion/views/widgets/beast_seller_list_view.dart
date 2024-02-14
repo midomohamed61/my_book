@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_book/Features/home/presenaion/views/widgets/best_seller.dart';
+import 'package:my_book/Features/home/presentaion/views/widgets/best_seller.dart';
 class BestSellerListView extends StatelessWidget {
   const BestSellerListView({super.key});
 

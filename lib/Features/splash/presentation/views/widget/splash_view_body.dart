@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_book/Features/home/presenaion/views/home_view.dart';
+import 'package:my_book/Features/home/presentaion/views/home_view.dart';
 import 'package:my_book/Features/splash/presentation/views/widget/sliding_text.dart';
 import 'package:my_book/constants.dart';
 import 'package:my_book/core/utls/assets.dart';

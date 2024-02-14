@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_book/Features/home/presenaion/views/widgets/book_rating.dart';
+import 'package:my_book/Features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:my_book/core/utls/app_router.dart';
 import 'package:my_book/core/utls/assets.dart';
 import 'package:my_book/core/utls/styles.dart';
