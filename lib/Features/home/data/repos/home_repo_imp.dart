@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 import 'package:my_book/Features/home/data/models/book_model.dart';
 
@@ -23,8 +24,11 @@ class HomeRepoImp implements HomeRepo {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    } on Exception catch (e) {
-      log(e as String);
+    }catch (e) {
+      if(e is DioError) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure.fromDioError(e.toString() as DioError));
     }
   }
 
