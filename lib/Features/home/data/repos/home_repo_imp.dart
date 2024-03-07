@@ -12,6 +12,7 @@ import 'home_repo.dart';
 
 class HomeRepoImp implements HomeRepo {
   late final ApiServices apiServices;
+
   HomeRepoImp(this.apiServices);
   @override
   Future<Either<Failure, List<BookModel>>> fetchNewsetBooks() async {
