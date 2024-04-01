@@ -12,7 +12,7 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder:(context,index){
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              child: CustomBookImage(),
+              child: CustomBookImage(imageUrl: "https://media.wired.com/photos/653186cfbdad3b3518d19dac/16:9/w_2400,h_1350,c_limit/8-Tips-to-Get-Started-with-Marvel's-Spider-Man-2-Culture.jpg",),
             );
           }),
     );
