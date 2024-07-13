@@ -15,13 +15,14 @@ class SimilarBooksListView extends StatelessWidget {
   return SizedBox(
     height: MediaQuery.of(context).size.height * .17,
     child: ListView.builder(
+        itemCount: state.books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: CustomBookImage(
               imageUrl:
-                  "https://media.wired.com/photos/653186cfbdad3b3518d19dac/16:9/w_2400,h_1350,c_limit/8-Tips-to-Get-Started-with-Marvel's-Spider-Man-2-Culture.jpg",
+              state.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
             ),
           );
         }),

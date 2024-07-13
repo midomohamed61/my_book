@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_book/Features/home/data/models/book_model.dart';
 import 'package:my_book/Features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:my_book/Features/home/presentaion/views/widgets/books_action.dart';
 import 'package:my_book/Features/home/presentaion/views/widgets/books_details_sections.dart';
@@ -10,8 +11,8 @@ import 'package:my_book/core/utls/styles.dart';
 import 'package:my_book/core/widget/custom_button.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
-
+  const BookDetailsViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -22,9 +23,12 @@ class BookDetailsViewBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child:  Column(
               children: [
-                const CustomBookDetailsAppBar(),
-                const BookDetailsSection(),
-                const SimilarBooksSection(),
+                 CustomBookDetailsAppBar(),
+                 BookDetailsSection(bookModel: bookModel,),
+                Expanded(
+                  child: SizedBox(height: 50,),
+                ),
+                 SimilarBooksSection(),
               ],
             ),
           ),
